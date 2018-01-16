@@ -15,12 +15,12 @@ namespace BasicAuthentication.Controllers
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
 
-		public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, ApplicationDbContext db)
-		{
-			_userManager = userManager;
-			_signInManager = signInManager;
-			_db = db;
-		}
+        public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, ApplicationDbContext db)
+        {
+            _userManager = userManager;
+            _signInManager = signInManager;
+            _db = db;
+        }
 
         public IActionResult Index()
         {
@@ -36,15 +36,15 @@ namespace BasicAuthentication.Controllers
         public async Task<IActionResult> Register(RegisterViewModel model)
         {
             var user = new ApplicationUser { UserName = model.Email };
-            IdentityResult result = await _userManager.CreateAsync(user, model.Password);
-            if (result.Succeeded)
+            if (model.Password == model.ConfirmPassword)
             {
-                return RedirectToAction("Index");
+                IdentityResult result = await _userManager.CreateAsync(user, model.Password);
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("Index");
+                }
             }
-            else
-            {
-                return View();
-            }
+            return View();
         }
 
         public IActionResult Login()
@@ -71,6 +71,11 @@ namespace BasicAuthentication.Controllers
         {
             await _signInManager.SignOutAsync();
             return RedirectToAction("Index");
+        }
+
+        public IActionResult LoginFail()
+        {
+            return View();
         }
     }
 }

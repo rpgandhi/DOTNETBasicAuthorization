@@ -12,6 +12,8 @@
     <Folder Include="Views\Account\" />
     <Folder Include="Views\Shared\" />
     <Folder Include="ViewModels\" />
+    <Folder Include="wwwroot\css\" />
+    <Folder Include="Views\Item\" />
   </ItemGroup>
 
   <ItemGroup>

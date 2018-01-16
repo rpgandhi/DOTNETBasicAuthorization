@@ -46,7 +46,7 @@ namespace BasicAuthentication
 		public void Configure(IApplicationBuilder app)
 		{
             app.UseIdentity();
-
+            app.UseStaticFiles();
 			app.UseDeveloperExceptionPage();
 			app.UseMvc(routes =>
 			{
