@@ -1,8 +1,16 @@
 ﻿<Properties StartupConfiguration="{8B7011AD-4A0D-40A1-BF97-1BC06FD0E5F4}|Default">
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="BasicAuthentication/Controllers/RoleController.cs">
+    <Files>
+      <File FileName="BasicAuthentication/Controllers/AccountController.cs" Line="62" Column="14" />
+      <File FileName="BasicAuthentication/Controllers/RoleController.cs" Line="19" Column="41" />
+      <File FileName="BasicAuthentication/Views/Role/ManageUserRoles.cshtml" Line="19" Column="110" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/Guest/Projects/BasicAuthentication/BasicAuthentication/Controllers/RoleController.cs" relfile="BasicAuthentication/Controllers/RoleController.cs" line="82" column="70" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.BasicAuthentication PreferredExecutionTarget="MonoDevelop.Default" />
